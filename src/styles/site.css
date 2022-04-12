@@ -1,4 +1,4 @@
-@import "base/_fonts";
+@import "./base/_fonts.css";
 
 div {
   box-sizing: border-box;
