@@ -25,16 +25,33 @@ const palette = {
 
 const colors = {
   h1Foreground: palette.themeSecondary,
+  contentContainerBackground: palette.neutralLight,
+  searchContainerBackground: palette.neutralSecondary,
+}
+
+const widths = {
+  width50: "50%",
+  width100px: "100px",
+  width800px: "800px",
+}
+
+const paddings = {
+  padding20: "20px",
+}
+
+const borders = {
+  test: "1px solid" + palette.black,
+  radius20: "20px",
 }
 
 export const officeUITheme = {
   id: "OFFICE-UI",
   name: "Office UI",
-  borders: null,
+  borders: borders,
   colors: colors,
   fonts: null,
   fontSizes: null,
   margins: null,
-  paddings: null,
-  widths: null,
+  paddings: paddings,
+  widths: widths,
 }
