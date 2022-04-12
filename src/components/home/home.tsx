@@ -12,14 +12,20 @@ export const Home = () => {
     <>
       <div className="App">
         {/* Header */}
-        <p className={homeStyle.titleContainer}>Hello world!</p>
+
         {/* Content */}
-        <Stack tokens={stackTokens}>
-          <SearchBox
-            placeholder="Search"
-            onSearch={(newValue) => console.log("value is " + newValue)}
-          />
-        </Stack>
+        <h1 className={homeStyle.titleContainer}>
+          Buscador de usuarios en GitHub
+        </h1>
+        <div>
+          <Stack tokens={stackTokens}>
+            <SearchBox
+              placeholder="Search"
+              onSearch={(newValue) => console.log("value is " + newValue)}
+            />
+          </Stack>
+        </div>
+
         {/* Footer */}
       </div>
     </>
