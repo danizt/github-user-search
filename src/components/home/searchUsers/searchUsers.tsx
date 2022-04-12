@@ -18,6 +18,7 @@ export const SearchUsers = () => {
         <SearchBox
           placeholder="Search"
           onSearch={(newValue) => console.log("value is " + newValue)}
+          className={searchUsersStyle.searchBox}
         />
         <DefaultButton
           text="Search"

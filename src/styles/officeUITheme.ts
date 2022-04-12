@@ -27,10 +27,12 @@ const colors = {
   h1Foreground: palette.themeSecondary,
   contentContainerBackground: palette.neutralLight,
   searchContainerBackground: palette.neutralSecondary,
+  cardShadow: palette.neutralPrimary,
 }
 
 const widths = {
   width50: "50%",
+  width100: "100%",
   width100px: "100px",
   width800px: "800px",
 }
