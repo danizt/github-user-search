@@ -44,12 +44,16 @@ const borders = {
   radius20: "20px",
 }
 
+const fonts = {
+  CascadiaRegular: "Cascadia Code",
+}
+
 export const officeUITheme = {
   id: "OFFICE-UI",
   name: "Office UI",
   borders: borders,
   colors: colors,
-  fonts: null,
+  fonts: fonts,
   fontSizes: null,
   margins: null,
   paddings: paddings,
