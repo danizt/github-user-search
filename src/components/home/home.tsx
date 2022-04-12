@@ -1,6 +1,6 @@
 import { HomeStyle } from "./home.jss"
 import { useTheme } from "react-jss"
-import { SearchUser } from "./searchUsers/searchUsers"
+import { SearchUsers } from "./searchUsers/searchUsers"
 
 export const Home = () => {
   const theme = useTheme() as any
@@ -16,7 +16,7 @@ export const Home = () => {
           Buscador de usuarios en GitHub
         </h1>
         <div className={homeStyle.contentContainer}>
-          <SearchUser />
+          <SearchUsers />
         </div>
 
         {/* Footer */}

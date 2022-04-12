@@ -4,7 +4,7 @@ import { SearchBox } from "@fluentui/react/lib/SearchBox"
 import { Stack, IStackTokens } from "@fluentui/react/lib/Stack"
 import { DefaultButton } from "@fluentui/react"
 
-export const SearchUser = () => {
+export const SearchUsers = () => {
   const theme = useTheme() as any
   const searchUsersStyle = SearchUsersStyle(theme)
   const stackTokens: Partial<IStackTokens> = {}
