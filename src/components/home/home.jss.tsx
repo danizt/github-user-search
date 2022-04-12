@@ -2,6 +2,6 @@ import { createUseStyles } from "react-jss"
 
 export const HomeStyle = createUseStyles((theme: any) => ({
   titleContainer: {
-    color: "red",
+    color: theme.palette.neutralTertiary,
   },
 }))
