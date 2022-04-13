@@ -8,7 +8,7 @@ export const SearchUsersStyle = createUseStyles((theme: any) => ({
 
     maxWidth: theme.widths.width50,
     width: theme.widths.width800px,
-    padding: theme.paddings.padding20,
+    padding: theme.paddings.padding10,
     borderRadius: theme.borders.radius20,
     boxShadow: "0 5px 20px " + theme.colors.cardShadow,
   },

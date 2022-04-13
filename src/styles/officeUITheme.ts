@@ -38,6 +38,7 @@ const widths = {
 }
 
 const paddings = {
+  padding10: "10px",
   padding20: "20px",
 }
 
