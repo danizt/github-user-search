@@ -18,8 +18,6 @@ export const SearchUsers = () => {
     findUserByName(term)
       .then((users) => setUsers(users))
       .catch((err) => console.log(err))
-
-    // console.log(users)
   }
 
   return (
@@ -42,7 +40,7 @@ export const SearchUsers = () => {
       </Stack>
       <div>
         {users?.map((user, index) => (
-          <p key={user.id}>{user.login}</p>
+          <p key={index}>{user.login}</p>
         ))}
       </div>
     </>
