@@ -38,25 +38,24 @@ export const SearchUsers = () => {
           className={searchUsersStyle.searchUsersButton}
         />
       </Stack>
-      <div>
+      <Stack className={searchUsersStyle.usersContainer}>
         {users?.map((user, index) => (
-          <>
+          <div key={index} className={searchUsersStyle.userContainer}>
             <Image
-              key={index}
               src={user.avatarUrl}
               alt="Example with no image fit value and height or width is specified."
-              width={100}
-              height={100}
+              width={50}
+              height={50}
             />
-            <Text key={index} variant="large" nowrap block>
+            <Text variant="large" nowrap block>
               {user.login}
             </Text>
-            <Text key={index} variant="large" nowrap block>
+            {/* <Text variant="large" nowrap block>
               {user.htmlUrl}
-            </Text>
-          </>
+            </Text> */}
+          </div>
         ))}
-      </div>
+      </Stack>
     </>
   )
 }
