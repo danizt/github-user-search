@@ -2,7 +2,7 @@ import { SearchUsersStyle } from './searchUsers.jss'
 import { useTheme } from 'react-jss'
 import { SearchBox } from '@fluentui/react/lib/SearchBox'
 import { Stack, IStackTokens } from '@fluentui/react/lib/Stack'
-import { DefaultButton } from '@fluentui/react'
+import { Image, Text, DefaultButton } from '@fluentui/react'
 import { findUserByName } from '../../../services/gitHubService'
 import { useState } from 'react'
 import { GitHubUser } from '../../../types'
@@ -40,7 +40,21 @@ export const SearchUsers = () => {
       </Stack>
       <div>
         {users?.map((user, index) => (
-          <p key={index}>{user.login}</p>
+          <>
+            <Image
+              key={index}
+              src={user.avatarUrl}
+              alt="Example with no image fit value and height or width is specified."
+              width={100}
+              height={100}
+            />
+            <Text key={index} variant="large" nowrap block>
+              {user.login}
+            </Text>
+            <Text key={index} variant="large" nowrap block>
+              {user.htmlUrl}
+            </Text>
+          </>
         ))}
       </div>
     </>
