@@ -1,14 +1,14 @@
-import { createUseStyles } from "react-jss"
+import { createUseStyles } from 'react-jss'
 
 export const HomeStyle = createUseStyles((theme: any) => ({
   titleContainer: {
     color: theme.colors.h1Foreground,
-    textAlign: "center",
+    textAlign: 'center',
   },
   contentContainer: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
 
     padding: theme.paddings.padding20,
   },

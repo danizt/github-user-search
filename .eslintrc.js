@@ -1,7 +1,7 @@
 const RULES = {
-  OFF: "off",
-  WARN: "warn",
-  ERROR: "error",
+  OFF: 'off',
+  WARN: 'warn',
+  ERROR: 'error',
 }
 
 module.exports = {
@@ -12,22 +12,22 @@ module.exports = {
   },
   settings: {
     react: {
-      version: "detect",
+      version: 'detect',
     },
   },
-  extends: ["plugin:react/recommended", "standard", "prettier"],
-  parser: "@typescript-eslint/parser",
+  extends: ['plugin:react/recommended', 'standard', 'prettier'],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: "latest",
-    sourceType: "module",
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
-  plugins: ["react", "@typescript-eslint"],
+  plugins: ['react', '@typescript-eslint'],
   rules: {
-    "react/react-in-jsx-scope": RULES.OFF,
-    "react/prop-types": RULES.OFF,
-    "no-use-before-define": RULES.OFF,
+    'react/react-in-jsx-scope': RULES.OFF,
+    'react/prop-types': RULES.OFF,
+    'no-use-before-define': RULES.OFF,
   },
 }

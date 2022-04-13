@@ -1,7 +1,7 @@
-import "./styles/site.css"
-import { ThemeProvider } from "react-jss"
-import { Home } from "./components/home/home"
-import { officeUITheme } from "./styles/officeUITheme"
+import './styles/site.css'
+import { ThemeProvider } from 'react-jss'
+import { Home } from './components/home/home'
+import { officeUITheme } from './styles/officeUITheme'
 
 function App() {
   return (

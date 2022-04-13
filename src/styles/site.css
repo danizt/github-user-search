@@ -1,9 +1,9 @@
-@import "./base/_fonts.css";
+@import './base/_fonts.css';
 
 div {
   box-sizing: border-box;
 }
 
 .App {
-  font-family: "Cascadia Code", monospace;
+  font-family: 'Cascadia Code', monospace;
 }

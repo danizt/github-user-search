@@ -1,5 +1,5 @@
-import { GitHubUser } from "../types"
-const API_URL = "https://api.github.com"
+import { GitHubUser } from '../types'
+const API_URL = 'https://api.github.com'
 const PER_PAGE = 50
 
 export async function findUserByName(name: string) {

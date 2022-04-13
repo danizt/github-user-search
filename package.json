@@ -6,7 +6,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint . --fix"
+    "lint": "prettier . --write"
   },
   "dependencies": {
     "@fluentui/react": "^8.64.3",

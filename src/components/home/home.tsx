@@ -1,6 +1,6 @@
-import { HomeStyle } from "./home.jss"
-import { useTheme } from "react-jss"
-import { SearchUsers } from "./searchUsers/searchUsers"
+import { HomeStyle } from './home.jss'
+import { useTheme } from 'react-jss'
+import { SearchUsers } from './searchUsers/searchUsers'
 
 export const Home = () => {
   const theme = useTheme() as any
