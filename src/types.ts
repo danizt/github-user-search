@@ -1,3 +1,4 @@
 export interface GitHubUser {
-  userName: string
+  id: number
+  login: string
 }

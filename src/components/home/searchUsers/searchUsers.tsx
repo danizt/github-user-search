@@ -42,7 +42,7 @@ export const SearchUsers = () => {
       </Stack>
       <div>
         {users?.map((user, index) => (
-          <p key={user.userName}>{user.userName}</p>
+          <p key={user.id}>{user.login}</p>
         ))}
       </div>
     </>
