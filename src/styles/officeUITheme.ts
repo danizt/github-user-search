@@ -31,6 +31,7 @@ const colors = {
   searchContainerBackground: palette.neutralSecondary,
   background: palette.background,
   cardShadow: palette.shadow,
+  text: palette.white,
 }
 
 const widths = {

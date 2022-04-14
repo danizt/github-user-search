@@ -1,6 +1,6 @@
 import { GitHubUser } from '../types'
 const API_URL = 'https://api.github.com'
-const PER_PAGE = 10
+const PER_PAGE = 30
 
 export async function findUserByName(name: string) {
   const users: GitHubUser[] = []

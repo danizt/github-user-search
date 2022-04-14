@@ -29,10 +29,7 @@ export const UserListStyle = createUseStyles((theme: any) => ({
 
     '&:hover': {
       cursor: 'pointer',
-    },
-
-    '&:hover > div': {
-      transition: '0.5s',
+      transition: '0.6s',
       transform: 'translateY(-10px)',
     },
   },
@@ -50,5 +47,6 @@ export const UserListStyle = createUseStyles((theme: any) => ({
   userLogin: {
     padding: theme.paddings.padding10,
     maxWidth: '140px',
+    color: theme.colors.text,
   },
 }))
