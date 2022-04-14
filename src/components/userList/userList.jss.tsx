@@ -22,10 +22,10 @@ export const UserListStyle = createUseStyles((theme: any) => ({
     width: theme.widths.width250px,
     height: theme.heights.height80px,
 
-    background: 'rgba(255, 255, 255, 0.05)',
-    boxShadow: '0 15px 35px rgba(0, 0, 0, 0.5)',
+    background: theme.colors.background,
+    boxShadow: '0 15px 35px ' + theme.colors.cardShadow,
     backdropFilter: 'blur(10px)',
-    borderRadius: '15px',
+    borderRadius: theme.borders.radius15px,
 
     '&:hover': {
       cursor: 'pointer',

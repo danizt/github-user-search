@@ -21,13 +21,16 @@ const palette = {
   neutralDark: '#201f1e',
   black: '#000000',
   white: '#ffffff',
+  shadow: 'rgba(0, 0, 0, 0.5)',
+  background: 'rgba(255, 255, 255, 0.05)',
 }
 
 const colors = {
   h1Foreground: palette.themeSecondary,
   contentContainerBackground: palette.neutralLight,
   searchContainerBackground: palette.neutralSecondary,
-  cardShadow: palette.neutralPrimary,
+  background: palette.background,
+  cardShadow: palette.shadow,
 }
 
 const widths = {
@@ -57,6 +60,7 @@ const margins = {
 
 const borders = {
   test: '1px solid' + palette.black,
+  radius15px: '15px',
   radius20px: '20px',
   radius50: '50%',
 }
