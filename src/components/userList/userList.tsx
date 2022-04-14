@@ -18,7 +18,7 @@ export const UserList = (props: IUserListProps) => {
           <div className={userListStyle.imageContainer}>
             <Image
               src={user.avatarUrl}
-              alt="Example with no image fit value and height or width is specified."
+              alt="userImage"
               width={50}
               height={50}
               className={userListStyle.userImage}

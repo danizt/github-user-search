@@ -8,7 +8,7 @@ export const Home = () => {
 
   return (
     <>
-      <div className="App">
+      <div className={homeStyle.app}>
         {/* Header */}
 
         {/* Content */}
