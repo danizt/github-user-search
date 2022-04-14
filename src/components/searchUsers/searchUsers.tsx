@@ -1,18 +1,19 @@
-import { SearchUsersStyle } from './searchUsers.jss'
+import { useState } from 'react'
 import { useTheme } from 'react-jss'
+import { SearchUsersStyle } from './searchUsers.jss'
 import { SearchBox } from '@fluentui/react/lib/SearchBox'
 import { Stack, IStackTokens } from '@fluentui/react/lib/Stack'
-import { Image, Text, DefaultButton } from '@fluentui/react'
-import { findUserByName } from '../../../services/gitHubService'
-import { useState } from 'react'
-import { GitHubUser } from '../../../types'
+import { DefaultButton } from '@fluentui/react'
+import { findUserByName } from '../../services/gitHubService'
+import { GitHubUser } from '../../types'
+import { UserList } from '../userList/userList'
 
 export const SearchUsers = () => {
   const theme = useTheme() as any
   const searchUsersStyle = SearchUsersStyle(theme)
   const stackTokens: Partial<IStackTokens> = {}
 
-  const [users, setUsers] = useState<GitHubUser[] | undefined>()
+  const [users, setUsers] = useState<GitHubUser[]>()
 
   const handleSearch = async (term: string) => {
     findUserByName(term)
@@ -38,24 +39,7 @@ export const SearchUsers = () => {
           className={searchUsersStyle.searchUsersButton}
         />
       </Stack>
-      <Stack className={searchUsersStyle.usersContainer}>
-        {users?.map((user, index) => (
-          <div key={index} className={searchUsersStyle.userContainer}>
-            <Image
-              src={user.avatarUrl}
-              alt="Example with no image fit value and height or width is specified."
-              width={50}
-              height={50}
-            />
-            <Text variant="large" nowrap block>
-              {user.login}
-            </Text>
-            {/* <Text variant="large" nowrap block>
-              {user.htmlUrl}
-            </Text> */}
-          </div>
-        ))}
-      </Stack>
+      {users ? <UserList users={users} /> : null}
     </>
   )
 }
