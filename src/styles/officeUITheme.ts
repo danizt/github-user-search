@@ -26,7 +26,7 @@ const palette = {
 }
 
 const colors = {
-  h1Foreground: palette.themeSecondary,
+  h1Foreground: palette.white,
   contentContainerBackground: palette.neutralLight,
   searchContainerBackground: palette.neutralSecondary,
   background: palette.background,

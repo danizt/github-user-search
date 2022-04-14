@@ -26,7 +26,7 @@ export const UserList = (props: IUserListProps) => {
           </div>
           <div className={userListStyle.loginContainer}>
             <Text
-              variant="large"
+              variant="mediumPlus"
               nowrap
               block
               className={userListStyle.userLogin}

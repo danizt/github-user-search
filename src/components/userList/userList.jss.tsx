@@ -34,11 +34,11 @@ export const UserListStyle = createUseStyles((theme: any) => ({
     },
   },
   imageContainer: {
-    flex: '1 1 30%',
+    flex: '1 1 16%',
     display: 'flex',
   },
   loginContainer: {
-    flex: '1 1 70%',
+    flex: '1 1 84%',
     display: 'flex',
   },
   userImage: {
@@ -46,7 +46,8 @@ export const UserListStyle = createUseStyles((theme: any) => ({
   },
   userLogin: {
     padding: theme.paddings.padding10,
-    maxWidth: '140px',
+    maxWidth: '150px',
     color: theme.colors.text,
+    fontFamily: theme.fonts.CascadiaRegular,
   },
 }))

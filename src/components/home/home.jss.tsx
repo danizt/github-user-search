@@ -2,13 +2,14 @@ import { createUseStyles } from 'react-jss'
 
 export const HomeStyle = createUseStyles((theme: any) => ({
   app: {
-    height: '100%',
+    minHeight: '100%',
     backgroundImage: 'url(./src/assets/wallpaper.svg)',
   },
   titleContainer: {
     color: theme.colors.h1Foreground,
     textAlign: 'center',
     marginTop: 0,
+    paddingTop: theme.paddings.padding20,
   },
   contentContainer: {
     display: 'flex',
