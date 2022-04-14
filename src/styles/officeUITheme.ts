@@ -34,9 +34,15 @@ const widths = {
   width50: '50%',
   width100: '100%',
   width100px: '100px',
+  width200px: '200px',
+  width250px: '250px',
   width300px: '300px',
   width500px: '500px',
   width800px: '800px',
+}
+
+const heights = {
+  height80px: '80px',
 }
 
 const paddings = {
@@ -51,7 +57,8 @@ const margins = {
 
 const borders = {
   test: '1px solid' + palette.black,
-  radius20: '20px',
+  radius20px: '20px',
+  radius50: '50%',
 }
 
 const fonts = {
@@ -68,4 +75,5 @@ export const officeUITheme = {
   margins: margins,
   paddings: paddings,
   widths: widths,
+  heights: heights,
 }
