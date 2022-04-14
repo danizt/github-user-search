@@ -14,9 +14,10 @@ npm run dev
 - Proyecto React creado con [Vite](https://vitejs.dev/)
 - Consultas al API de GitHub ([docs](https://docs.github.com/en/rest))
 
-## Bibliotecas
+## Bibliotecas y recursos
 
 - Linting: [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/)
 - Componentes: [Fluent UI](https://developer.microsoft.com/en-us/fluentui#/)
 - Tematización dinámica: [React-JSS](https://cssinjs.org/react-jss/?v=v10.9.0)
 - Fuente: [Cascadia Code](https://github.com/microsoft/cascadia-code)
+- Fondo generado con la herramienta [Haikei](https://app.haikei.app/)
