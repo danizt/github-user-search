@@ -52,6 +52,7 @@ const heights = {
 const paddings = {
   padding10: '10px',
   padding20: '20px',
+  padding40: '40px',
 }
 
 const margins = {
@@ -68,6 +69,7 @@ const borders = {
 
 const fonts = {
   CascadiaRegular: 'Cascadia Code',
+  large: '24px',
 }
 
 export const officeUITheme = {

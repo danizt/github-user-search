@@ -50,20 +50,28 @@ export const UserListStyle = createUseStyles((theme: any) => ({
     color: theme.colors.text,
     fontFamily: theme.fonts.CascadiaRegular,
   },
-  container: {
+  modalContainer: {
     display: 'flex',
     flexFlow: 'column nowrap',
     alignItems: 'stretch',
+
+    background: theme.colors.background,
+    boxShadow: '0 15px 35px ' + theme.colors.cardShadow,
+    backdropFilter: 'blur(10px)',
+    borderRadius: theme.borders.radius15px,
+    color: theme.colors.text,
   },
-  header: [
-    // theme.fonts.xLargePlus,
-    {
-      flex: '1 1 auto',
-      // borderTop: `4px solid ${theme.palette.themePrimary}`,
-      // color: theme.palette.neutralPrimary,
-      display: 'flex',
-      alignItems: 'center',
-      padding: '12px 12px 14px 24px',
+  modalHeader: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: theme.paddings.padding20,
+
+    fontFamily: theme.fonts.CascadiaRegular,
+    fontSize: theme.fonts.large,
+
+    '& > span, & > button': {
+      margin: 0,
     },
-  ],
+  },
 }))

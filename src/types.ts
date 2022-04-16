@@ -36,3 +36,8 @@ export interface GitHubUserDetails extends GitHubUser {
   createdAt: string
   updatedAt: string
 }
+
+export interface SelectedUser {
+  login: string
+  url: string
+}
