@@ -1,4 +1,4 @@
-import { GitHubUser } from '../types'
+import { GitHubUser, GitHubUserDetails } from '../types'
 const API_URL = 'https://api.github.com'
 const PER_PAGE = 30
 
@@ -35,4 +35,48 @@ export async function findUserByName(name: string) {
   })
 
   return users
+}
+
+export async function getUserData(userUrl: string) {
+  const response = await fetch(userUrl)
+  const jsonObject = await response.json()
+
+  const user: GitHubUserDetails = {
+    login: jsonObject.login,
+    id: jsonObject.id,
+    nodeId: jsonObject.node_id,
+    avatarUrl: jsonObject.avatar_url,
+    gravatarId: jsonObject.gravatar_id,
+    url: jsonObject.url,
+    htmlUrl: jsonObject.html_url,
+    followersUrl: jsonObject.followers_url,
+    followingUrl: jsonObject.following_url,
+    gistsUrl: jsonObject.gists_url,
+    starredUrl: jsonObject.starred_url,
+    subscriptionsUrl: jsonObject.subscriptions_url,
+    organizationsUrl: jsonObject.organizations_url,
+    reposUrl: jsonObject.repos_url,
+    eventsUrl: jsonObject.events_url,
+    receivedEventsUrl: jsonObject.received_events_url,
+    type: jsonObject.type,
+    siteAdmin: jsonObject.site_admin,
+    score: 0,
+
+    name: jsonObject.name,
+    company: jsonObject.company,
+    blog: jsonObject.blog,
+    location: jsonObject.location,
+    email: jsonObject.email,
+    hireable: jsonObject.hireable,
+    bio: jsonObject.bio,
+    twitterUsername: jsonObject.twitter_username,
+    publicRepos: jsonObject.public_repos,
+    publicGists: jsonObject.public_gists,
+    followers: jsonObject.followers,
+    following: jsonObject.following,
+    createdAt: jsonObject.created_at,
+    updatedAt: jsonObject.updated_at,
+  }
+
+  return user
 }
