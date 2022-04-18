@@ -45,8 +45,10 @@ export const UserDetailsStyle = createUseStyles((theme: any) => ({
 
     '& span:first-child': {
       fontWeight: 'bolder',
-      padding: theme.paddings.padding10,
       fontSize: theme.fonts.subTitle,
+    },
+    '& span': {
+      padding: theme.paddings.padding2,
     },
   },
   imageContainer: {
@@ -62,8 +64,14 @@ export const UserDetailsStyle = createUseStyles((theme: any) => ({
   },
   contentContainer: {
     display: 'flex',
-    flexDirection: 'column',
+    flexDirection: 'row',
     justifyContent: 'center',
     marginTop: theme.margins.margin20,
+  },
+  sectionContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+
+    margin: theme.margins.margin20,
   },
 }))

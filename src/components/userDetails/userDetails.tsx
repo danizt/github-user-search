@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import { getUserData } from '../../services/gitHubService'
 import { GitHubUserDetails } from '../../types'
 import { UserDetailsStyle } from './userDetails.jss'
-import { Image, useTheme } from '@fluentui/react'
+import { FontIcon, Image, useTheme } from '@fluentui/react'
+import moment from 'moment'
 
 interface IUserDetailProps {
   userUrl: string | undefined
@@ -36,7 +37,9 @@ export const UserDetails = (props: IUserDetailProps) => {
           </div>
           <div className={userDetailsStyle.loginContainer}>
             <span>{userData?.name}</span>
-            <span>{userData?.location}</span>
+            <span>
+              <FontIcon iconName="Pinned" /> {userData?.location}
+            </span>
           </div>
           <div className={userDetailsStyle.bioContainer}>
             <span>{userData?.bio}</span>
@@ -44,30 +47,55 @@ export const UserDetails = (props: IUserDetailProps) => {
         </div>
 
         <div className={userDetailsStyle.contentContainer}>
-          <span>Compañía: {userData?.company}</span>
-          <span>Blog: {userData?.blog}</span>
-          <span>Email: {userData?.email}</span>
+          <div className={userDetailsStyle.sectionContainer}>
+            <span>
+              <FontIcon iconName="UserEvent" /> {userData?.login}
+            </span>
+            <span>
+              <FontIcon iconName="Home" /> {userData?.company}
+            </span>
+            <span>
+              <FontIcon iconName="DietPlanNotebook" />{' '}
+              <a href={userData?.blog}>{userData?.blog}</a>
+            </span>
+            <span>{userData?.email}</span>
 
-          <span>Twitter: {userData?.twitterUsername}</span>
-          <span>
-            Enlace Twitter: https://twitter.com/{userData?.twitterUsername}
-          </span>
+            <span>
+              <FontIcon iconName="Commitments" />{' '}
+              <a href={`https://twitter.com/${userData?.twitterUsername}`}>
+                {userData?.twitterUsername}
+              </a>
+            </span>
+          </div>
 
-          <span>Repositorios públicos: {userData?.publicRepos}</span>
-          <span>
-            Enlace repos públicos: {userData?.htmlUrl}?tab=repositories
-          </span>
+          <div className={userDetailsStyle.sectionContainer}>
+            <span>
+              Siguiendo:{' '}
+              <a href={userData?.htmlUrl + '?tab=following'}>
+                {userData?.following}
+              </a>
+            </span>
 
-          <span>Siguiendo: {userData?.following}</span>
-          <span>Enlace siguiendo: {userData?.htmlUrl}?tab=following</span>
+            <span>
+              Seguidores:{' '}
+              <a href={userData?.htmlUrl + '?tab=followers'}>
+                {userData?.followers}
+              </a>
+            </span>
 
-          <span>Seguidores: {userData?.followers}</span>
-          <span>Enlace seguidores: {userData?.htmlUrl}?tab=followers</span>
-
-          <span>Fecha de registro: {userData?.createdAt}</span>
-
-          <span>Enlace perfil: {userData?.htmlUrl}</span>
+            <span>
+              Repositorios públicos:{' '}
+              <a href={userData?.htmlUrl + '?tab=repositories'}>
+                {userData?.publicRepos}
+              </a>
+            </span>
+            <span>
+              Fecha de registro:{' '}
+              {moment(userData?.createdAt, 'YYYY-MM-DD').format('DD/MM/YYYY')}
+            </span>
+          </div>
         </div>
+        <span>Enlace perfil: {userData?.htmlUrl}</span>
       </div>
     </>
   )

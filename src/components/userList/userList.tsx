@@ -73,7 +73,7 @@ export const UserList = (props: IUserListProps) => {
       >
         <div className={userListStyle.modalHeader}>
           <span> </span>
-          <span id="TODO">{selectedUser?.login}</span>
+          <span> </span>
           <IconButton
             styles={iconButtonStyles}
             iconProps={cancelIcon}

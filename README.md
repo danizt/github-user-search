@@ -21,3 +21,4 @@ npm run dev
 - Tematización dinámica: [React-JSS](https://cssinjs.org/react-jss/?v=v10.9.0)
 - Fuente: [Cascadia Code](https://github.com/microsoft/cascadia-code)
 - Fondo generado con la herramienta [Haikei](https://app.haikei.app/)
+- Gestión de fechas: [Moment.js](https://momentjs.com/)
