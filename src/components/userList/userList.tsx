@@ -29,7 +29,6 @@ export const UserList = (props: IUserListProps) => {
       marginRight: '2px',
     },
     rootHovered: {
-      // color: theme.palette.neutralDark,
       background: theme.colors.background,
     },
   }

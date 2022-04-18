@@ -70,6 +70,7 @@ const borders = {
 const fonts = {
   CascadiaRegular: 'Cascadia Code',
   large: '24px',
+  subTitle: '18px',
 }
 
 export const officeUITheme = {
