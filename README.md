@@ -27,6 +27,10 @@ npm run dev
 - Gestión de fechas: [Moment.js](https://momentjs.com/)
 - Despliegue: [Vercel](https://vercel.com/)
 
-## Demo en vídeo
+## Demo y capturas de la aplicación
 
-![Demo](./docs/demo.mp4)
+[Demo en vídeo](./docs/demo.mp4)
+
+![Search screenshot](./docs/scSearch.png)
+
+![Detail screenshot](./docs/scDetail.png)
