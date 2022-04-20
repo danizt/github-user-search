@@ -65,8 +65,7 @@ export const UserListStyle = createUseStyles((theme: any) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    padding: theme.paddings.padding20,
-
+    padding: theme.paddings.padding10,
     fontFamily: theme.fonts.CascadiaRegular,
     fontSize: theme.fonts.large,
 
