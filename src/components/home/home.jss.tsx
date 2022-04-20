@@ -3,7 +3,7 @@ import { createUseStyles } from 'react-jss'
 export const HomeStyle = createUseStyles((theme: any) => ({
   app: {
     minHeight: '100%',
-    backgroundImage: 'url(./src/assets/wallpaper.svg)',
+    backgroundImage: `url(/src/assets/background.svg)`,
   },
   titleContainer: {
     color: theme.colors.h1Foreground,
