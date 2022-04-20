@@ -14,11 +14,14 @@ export const SearchUsers = () => {
   const stackTokens: Partial<IStackTokens> = {}
 
   const [users, setUsers] = useState<GitHubUser[]>()
+  const [inputValue, setInputValue] = useState<string>()
 
-  const handleSearch = async (term: string) => {
-    findUserByName(term)
-      .then((users) => setUsers(users))
-      .catch((err) => console.log(err))
+  const handleSearch = async (term: string | undefined) => {
+    if (term) {
+      findUserByName(term)
+        .then((users) => setUsers(users))
+        .catch((err) => console.log(err))
+    }
   }
 
   return (
@@ -29,12 +32,13 @@ export const SearchUsers = () => {
       >
         <SearchBox
           placeholder="Search"
-          onSearch={(newValue) => handleSearch(newValue)}
+          onChange={(_, v) => setInputValue(v)}
+          onSearch={() => handleSearch(inputValue)}
           className={searchUsersStyle.searchBox}
         />
         <DefaultButton
           text="Search"
-          onClick={() => console.log('value is ')}
+          onClick={() => handleSearch(inputValue)}
           allowDisabledFocus
           className={searchUsersStyle.searchUsersButton}
         />
