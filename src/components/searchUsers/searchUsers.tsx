@@ -21,6 +21,8 @@ export const SearchUsers = () => {
       findUserByName(term)
         .then((users) => setUsers(users))
         .catch((err) => console.log(err))
+    } else {
+      setUsers(undefined)
     }
   }
 
