@@ -29,4 +29,4 @@ npm run dev
 
 ## Demo en vídeo
 
-![Demo](./docs/demo.mov)
+![Demo](./docs/demo.mp4)
