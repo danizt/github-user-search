@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { getUserData } from '../../services/gitHubService'
 import { GitHubUserDetails } from '../../types'
 import { UserDetailsStyle } from './userDetails.jss'
-import { FontIcon, Image, useTheme } from '@fluentui/react'
+import { FontIcon, Image, Link, useTheme } from '@fluentui/react'
 import moment from 'moment'
 
 interface IUserDetailProps {
@@ -37,57 +37,87 @@ export const UserDetails = (props: IUserDetailProps) => {
           </div>
           <div className={userDetailsStyle.loginContainer}>
             <span>{userData?.name}</span>
-            <span>
-              <FontIcon iconName="Pinned" /> {userData?.location}
-            </span>
+            {userData?.location ? (
+              <>
+                <span>
+                  <FontIcon iconName="Pinned" /> {userData?.location}
+                </span>
+              </>
+            ) : null}
           </div>
-          <div className={userDetailsStyle.bioContainer}>
-            <span>{userData?.bio}</span>
-          </div>
+          {userData?.bio ? (
+            <>
+              <div className={userDetailsStyle.bioContainer}>
+                <span>{userData?.bio}</span>
+              </div>
+            </>
+          ) : null}
         </div>
-
         <div className={userDetailsStyle.contentContainer}>
           <div className={userDetailsStyle.sectionContainer}>
             <span>
               <FontIcon iconName="UserEvent" /> {userData?.login}
             </span>
-            <span>
-              <FontIcon iconName="Home" /> {userData?.company}
-            </span>
-            <span>
-              <FontIcon iconName="DietPlanNotebook" />{' '}
-              <a href={userData?.blog}>{userData?.blog}</a>
-            </span>
-            <span>{userData?.email}</span>
+            {userData?.company ? (
+              <>
+                <span>
+                  <FontIcon iconName="Home" /> {userData?.company}
+                </span>
+              </>
+            ) : null}
+            {userData?.blog ? (
+              <>
+                <span>
+                  <FontIcon iconName="DietPlanNotebook" />{' '}
+                  <Link href={userData?.blog} target="_blank">
+                    {userData?.blog}
+                  </Link>
+                </span>
+              </>
+            ) : null}
+            {userData?.email ? (
+              <>
+                <span>
+                  <FontIcon iconName="Mail" /> {userData?.email}
+                </span>
+              </>
+            ) : null}
 
-            <span>
-              <FontIcon iconName="Commitments" />{' '}
-              <a href={`https://twitter.com/${userData?.twitterUsername}`}>
-                {userData?.twitterUsername}
-              </a>
-            </span>
+            {userData?.twitterUsername ? (
+              <>
+                <span>
+                  <FontIcon iconName="Commitments" />{' '}
+                  <Link
+                    href={`https://twitter.com/${userData?.twitterUsername}`}
+                    target="_blank"
+                  >
+                    {userData?.twitterUsername}
+                  </Link>
+                </span>
+              </>
+            ) : null}
           </div>
-
           <div className={userDetailsStyle.sectionContainer}>
             <span>
               Siguiendo:{' '}
-              <a href={userData?.htmlUrl + '?tab=following'}>
+              <Link href={userData?.htmlUrl + '?tab=following'} target="_blank">
                 {userData?.following}
-              </a>
+              </Link>
             </span>
-
             <span>
               Seguidores:{' '}
-              <a href={userData?.htmlUrl + '?tab=followers'}>
+              <Link href={userData?.htmlUrl + '?tab=followers'} target="_blank">
                 {userData?.followers}
-              </a>
+              </Link>
             </span>
-
             <span>
               Repositorios públicos:{' '}
-              <a href={userData?.htmlUrl + '?tab=repositories'}>
+              <Link
+                href={userData?.htmlUrl + '?tab=repositories'}
+                target="_blank"
+              >
                 {userData?.publicRepos}
-              </a>
+              </Link>
             </span>
             <span>
               Fecha de registro:{' '}
@@ -95,7 +125,12 @@ export const UserDetails = (props: IUserDetailProps) => {
             </span>
           </div>
         </div>
-        <span>Enlace perfil: {userData?.htmlUrl}</span>
+        <Link href={userData?.htmlUrl} target="_blank">
+          <img
+            src="https://img.shields.io/badge/-Github-000?style=flat&logo=Github&logoColor=white"
+            alt="dzarzoso"
+          />
+        </Link>
       </div>
     </>
   )

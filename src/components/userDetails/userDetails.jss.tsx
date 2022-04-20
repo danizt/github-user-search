@@ -61,6 +61,8 @@ export const UserDetailsStyle = createUseStyles((theme: any) => ({
   bioContainer: {
     padding: theme.paddings.padding10,
     margin: theme.margins.margin10,
+    width: theme.widths.width100,
+    textAlign: 'center',
   },
   contentContainer: {
     display: 'flex',
@@ -71,7 +73,11 @@ export const UserDetailsStyle = createUseStyles((theme: any) => ({
   sectionContainer: {
     display: 'flex',
     flexDirection: 'column',
-
+    justifyContent: 'center',
     margin: theme.margins.margin20,
+
+    '& span': {
+      padding: theme.paddings.padding5,
+    },
   },
 }))

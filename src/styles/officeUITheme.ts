@@ -51,6 +51,7 @@ const heights = {
 
 const paddings = {
   padding2: '2px',
+  padding5: '5px',
   padding10: '10px',
   padding20: '20px',
   padding40: '40px',
