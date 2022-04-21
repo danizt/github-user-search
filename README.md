@@ -2,7 +2,7 @@
 
 Aplicación web realizada con React y Typescript que busca usuarios en GitHub.
 
-Proyecto realizado con fines educativos, sugerido por [@ENCAMINA](https://github.com/Encamina)
+Proyecto realizado con fines educativos, sugerido por [@ENCAMINA](https://github.com/Encamina).
 
 ## Instalación
 
