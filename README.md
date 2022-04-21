@@ -1,6 +1,6 @@
 # Buscador de usuarios de GitHub
 
-Aplicación web realizada con React y Typescript que busca usuarios en GitHub.
+Aplicación web realizada con React y Typescript que busca usuarios en GitHub y muestra los datos principales de su perfil.
 
 Proyecto realizado con fines educativos, sugerido por [@ENCAMINA](https://github.com/Encamina).
 
